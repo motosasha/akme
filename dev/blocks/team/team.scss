@@ -1,0 +1,164 @@
+// В этом файле должны быть стили для БЭМ-блока team, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.team {
+	overflow: visible;
+	&__slider-wrap {
+		position: relative;
+	}
+	&__slider {
+		margin: -24px -24px -48px;
+		padding: 24px 24px 48px;
+		.swiper-slide {
+			background: var(--color_bg_white);
+			box-shadow: 0 16px 32px rgba(10, 40, 94, 0.16);
+			height: auto !important;
+			transition: box-shadow .25s ease,
+						transform .25s ease;
+			width: 264px;
+			@media (min-width: 360px) {
+				width: 304px;
+			}
+			&:hover {
+				box-shadow: 0 24px 32px rgba(10, 40, 94, 0.24);
+				transform: translateY(-4px);
+			}
+		}
+	}
+	&__slider-next,
+	&__slider-prev {
+		background: var(--color_accent);
+		border-color: var(--color_accent);
+		display: none;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	@media (min-width: $screen-xl) {
+		&__slider-next,
+		&__slider-prev {
+			display: flex;
+		}
+		&__slider-next {
+			left: auto;
+			right: 0;
+		}
+		&__slider-prev {
+			left: 0;
+		}
+	}
+	@media (min-width: $screen-xxl) {
+		&__slider-next {
+			left: auto;
+			right: -88px;
+		}
+		&__slider-prev {
+			left: -88px;
+		}
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+	}
+	&__card-header {
+		align-items: center;
+		display: flex;
+		padding: 12px;
+	}
+	&__card-avatar {
+		border: 2px solid var(--color_accent);
+		border-radius: 50%;
+		display: block;
+		height: 32px;
+		margin-right: 12px;
+		width: 32px;
+	}
+	&__card-name {
+		color: var(--color_brand);
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 0.01em;
+		line-height: 100%;
+		user-select: none;
+	}
+	&__card-image {
+		display: block;
+	}
+	&__card-info {
+		padding: 12px;
+	}
+	&__card-like {
+		display: block;
+		height: 32px;
+		width: 32px;
+		transition: transform 0.4s ease;
+		cursor: pointer;
+		&:active {
+			transform: scale(0.9);
+			transition-duration: calc(0.4s / 3);
+		}
+
+		.like-checkbox {
+			position: absolute;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+
+			&:checked {
+				~ .like-icon {
+					svg.below {
+						height: 24px;
+						width: 24px;
+						transform: scale(1.6);
+						opacity: 0;
+						path {
+							fill: var(--color_error);
+						}
+					}
+					svg.front {
+						height: 24px;
+						width: 24px;
+						path {
+							fill: var(--color_error);
+						}
+					}
+				}
+			}
+		}
+
+		.like-icon {
+			height: 32px;
+			pointer-events: none;
+			width: 32px;
+			transition: transform 0.4s ease;
+			z-index: 5;
+			svg {
+				height: 24px;
+				width: 24px;
+				position: absolute;
+				transition: background-color 0.4s ease,
+				transform calc(0.4s * 1.5) ease,
+				opacity calc(0.4s * 1.5) ease;
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+	&__card-message {
+		color: var(--color_brand);
+		font-size: 14px;
+		letter-spacing: 0.01em;
+		line-height: 115%;
+		margin-bottom: 8px;
+		user-select: none;
+	}
+	&__card-descr {
+		color: var(--colot_text_muted);
+		font-size: 14px;
+		line-height: 116%;
+		user-select: none;
+	}
+}

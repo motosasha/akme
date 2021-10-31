@@ -1,0 +1,11 @@
+//- Все примеси в этом файле должны начинаться c имени блока (about)
+
+mixin about-items(items)
+	each item in items
+		.about__item
+			.about__item-frame
+				svg.about__item-icon
+					use(xlink:href='img/svgSprite.svg#icon__' + item.icon)
+			.about__item-info
+				.about__item-label!= item.label
+				.about__item-title!= item.title

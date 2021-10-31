@@ -1,0 +1,94 @@
+// В этом файле должны быть стили для БЭМ-блока grid, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.grid {
+	box-shadow: 1px 0 0 var(--color_grid_lines),
+				inset 1px 0 0 var(--color_grid_lines);
+	@include container(32px, 0px, 0px, 0px, 0px);
+	height: 100%;
+	position: relative;
+	z-index: 2;
+	@media (min-width: $screen-sm) {
+		&::after {
+			box-shadow: 1px 0 0 var(--color_grid_lines),
+						inset 1px 0 0 var(--color_grid_lines);
+			content: '';
+			height: calc(100% + 120px);
+			pointer-events: none;
+			position: absolute;
+			top: -120px;
+			transform: translateX(50%);
+			width: 50%;
+		}
+		&::before {
+			background: var(--color_grid_lines);
+			content: '';
+			height: calc(100% + 120px);
+			left: 37.5%;
+			position: absolute;
+			position: absolute;
+			top: -120px;
+			width: 1px;
+		}
+	}
+	&_fluid {
+		padding: 0 16px;
+		transition: padding .5s ease;
+		width: 100% !important;
+		@media (min-width: $screen-sm) {
+			padding: 0 16px;
+		}
+		@media (min-width: $screen-md) {
+			padding: 0 24px;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 0 32px;
+		}
+		@media (min-width: $screen-xxl) {
+			padding: 0 40px;
+		}
+		&::after,
+		&::before {
+			content: none !important;
+		}
+	}
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
+
+	//padding: 0 clamp(16px, 3vw, 48px);
+	//width: 100%;
+
+	/*
+	&__row {
+		@include row(32px, 16px, 16px, 16px, 16px);
+	}
+	&__col {
+		@include col(xs, 12, 12, 32px);
+		@include col(sm, 12, 12, 16px);
+		&_md_5 {
+			@include col(md, 5, $grid-columns, 16px);
+		}
+		&_md_6 {
+			@include col(md, 6, $grid-columns, 16px);
+		}
+		&_md_7 {
+			@include col(md, 7, $grid-columns, 16px);
+		}
+		&_lg_5 {
+			@include col(lg, 5, $grid-columns, 16px);
+		}
+		&_lg_7 {
+			@include col(lg, 7, $grid-columns, 16px);
+		}
+		&_xl_4 {
+			@include col(xl, 4, $grid-columns, 16px);
+		}
+		&_xl_8 {
+			@include col(xl, 8, $grid-columns, 16px);
+		}
+	}*/
+}

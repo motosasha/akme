@@ -1,0 +1,75 @@
+// В этом файле должны быть стили для БЭМ-блока join, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.join {
+	overflow: hidden;
+	padding-bottom: 32px;
+	position: relative;
+	@media (min-width: $screen-sm) {
+		height: 560px;
+		padding: 0;
+	}
+	@media (min-width: $screen-md) {
+		height: 520px;
+	}
+	@media (min-width: $screen-lg) {
+		height: 560px;
+	}
+	@media (min-width: $screen-xl) {
+		height: 800px;
+	}
+	.section__title {
+		position: relative;
+		z-index: 2;
+	}
+	&__form {
+		max-width: 304px;
+		position: relative;
+		//width: 25%;
+		z-index: 2;
+	}
+	.form__text {
+		margin-bottom: 64px;
+		width: 80%;
+		@media (min-width: $screen-md) {
+			margin: 0;
+			width: auto;
+		}
+	}
+	&__image {
+		display: block;
+		height: auto;
+		position: absolute;
+		right: 0;
+		top: 168px;
+		user-select: none;
+		width: 216px;
+		z-index: 1;
+		@media (min-width: $screen-sm) {
+			left: 50%;
+			right: auto;
+			top: 96px;
+			transform: translateX(-15%);
+			width: 400px;
+		}
+		@media (min-width: $screen-md) {
+			left: 50%;
+			right: auto;
+			top: 88px;
+			transform: translateX(-15%);
+			width: 600px;
+		}
+		@media (min-width: $screen-lg) {
+			top: 64px;
+			transform: translateX(-25%);
+			width: 768px;
+		}
+		@media (min-width: $screen-xl) {
+			left: 50%;
+			top: 160px;
+			transform: translateX(-20%);
+			width: 1176px;
+		}
+	}
+}

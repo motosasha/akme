@@ -1,0 +1,157 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header {
+	padding: 12px 0 20px;
+	transition: background .25s ease,
+				padding .25s ease;
+	@media (min-width: $screen-sm) {
+		padding: 24px 0 32px;
+	}
+	&_on_scroll {
+		background: rgba(10, 40, 94, 0.8);
+		backdrop-filter: blur(24px);
+		@media (min-width: $screen-sm) {
+			padding: 8px 0 16px;
+		}
+	}
+	&__inner {
+		display: grid;
+		grid-template-areas:
+				'logo button'
+				'logo phone'
+				'nav nav';
+		grid-template-columns: auto 152px;
+		@media (min-width: $screen-sm) {
+			grid-gap: 0 24px;
+			grid-template-areas:
+				'logo phone button'
+				'nav nav nav';
+			grid-template-columns: auto auto 190px;
+		}
+		@media (min-width: $screen-md) {
+			grid-template-columns: auto auto 25%;
+		}
+		@media (min-width: $screen-xl) {
+			grid-gap: 0;
+			grid-template-areas:
+				'logo nav phone button';
+			grid-template-columns: 200px auto auto 20%;
+		}
+		@media (min-width: $screen-xxl) {
+			grid-template-columns: 16.6667% 50% 16.6667% 16.6667%;
+		}
+	}
+	&__logo {
+		aspect-ratio: 182/104;
+		grid-area: logo;
+		fill: var(--color_text_invert);
+		width: clamp(112px, 20vw, 182px);
+	}
+	&__nav {
+		align-self: center;
+		height: 16px;
+		grid-area: nav;
+		justify-self: flex-start;
+		margin: 16px calc(min(-16px, -3vw)) 0;
+		max-width: calc(100% + 32px);
+		overflow: hidden;
+		@media (min-width: $screen-sm) {
+			height: auto;
+			margin: 24px 0 0;
+			max-width: none;
+		}
+	}
+	&__nav-inner {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: clamp(24px, 5vw, 56px);
+		height: 300%;
+		overflow: hidden;
+-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding: 0 calc(max(16px, 3vw));
+		@media (min-width: $screen-sm) {
+			height: auto;
+			overflow: auto;
+			padding: 0;
+		}
+		@media (min-width: $screen-lg) {
+			grid-gap: clamp(24px, 3vw, 56px);
+		}
+	}
+	&__nav-link {
+		color: var(--color_text_invert);
+		font-size: clamp(16px, 2.5vw, 20px);
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0.01em;
+		text-decoration: none;
+		transition: opacity .25s ease;
+		white-space: nowrap;
+		@media (min-width: $screen-xl) {
+			font-size: clamp(16px, 1.5vw, 20px);
+		}
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__phone {
+		color: var(--color_text_invert);
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		font-size: clamp(16px, 2.5vw, 32px);
+		font-weight: 500;
+		grid-area: phone;
+		justify-self: flex-end;
+		letter-spacing: 0.02em;
+		line-height: 100%;
+		margin: 8px 0;
+		text-decoration: none;
+		transition: opacity .25s ease;
+		white-space: nowrap;
+		@media (min-width: $screen-sm) {
+			align-self: center;
+		}
+		@media (min-width: $screen-lg) {
+			align-self: center;
+		}
+		@media (min-width: $screen-xl) {
+			font-size: clamp(16px, 2vw, 32px);
+			margin: 24px 0 0;
+		}
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__callback {
+		display: block;
+		font-size: 12px;
+		font-weight: 600;
+		grid-area: button;
+		height: 32px;
+		justify-self: flex-end;
+		padding: 12px 8px 8px 24px;
+		text-align: right;
+		text-transform: uppercase;
+		white-space: nowrap;
+		width: 100%;
+		@media (min-width: $screen-sm) {
+			align-self: center;
+			height: 48px;
+			padding: 24px 16px 12px 40px;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: 16px;
+			height: 80px;
+			padding: 52px 16px 12px 40px;
+		}
+		@media (min-width: $screen-xl) {
+			align-items: flex-end;
+			align-self: flex-end;
+			justify-self: flex-end;
+			max-width: 214px;
+		}
+	}
+}

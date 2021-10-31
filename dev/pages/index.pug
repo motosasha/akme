@@ -1,0 +1,344 @@
+extends ../pug/layout_default.pug
+
+block pageMain
+	section.hero
+		.grid
+			.hero__inner
+				.hero__info
+					h1.hero__title
+						| Аренда новой
+						br
+						| спецтехники
+					.hero__bubble с экипажем сроком от 1 месяца
+				a.hero__frame(data-scroll href="#equipment")
+					svg.hero__frame-icon
+						use(xlink:href='img/svgSprite.svg#icon__arrow_down')
+					.hero__frame-title Новая техника
+					.hero__frame-date 2020–2021 гг.
+	section.about
+		.grid
+			.about__inner
+				.about__grid
+					+about-items([
+						{icon: 'dozer', label: 'Современность', title: 'Новая современная техника HITACHI и KOMATSU 2020/2021 годов выпуска'},
+						{icon: 'construction', label: 'Качество', title: 'Большой опыт организации непрерывного цикла круглосуточной работы'},
+						{icon: 'satellite', label: 'Безопасность', title: 'Вся техника оснащена ССМ Глонасс и системой видеонаблюдения'},
+						{icon: 'docs', label: 'Сертифицированность', title: 'Работаем на объектах ПАО «Транснефть», со всеми необходимыми аттестациями'},
+						{icon: 'collaborate', label: 'Доверие', title: 'Объекты федерального значения (трасса М12 Москва-Казань, 11 единиц техники круглосуточно)'},
+						{icon: 'vagon', label: 'Забота', title: 'Есть собственные жилые вагон-дома для проживания сотрудников'}
+					])
+	section.equipment.section
+		#equipment.section__anchor
+		.grid
+			.section__inner.equipment__inner
+				.section__label Оборудование
+				h2.section__title Наша техника
+				.equipment__slider-wrap
+					.equipment__triggers
+						.equipment__trigger.equipment__trigger_active.excavatorTrigger Экскаваторы
+						.equipment__trigger.bulldozerTrigger Бульдозеры
+					.swiper.equipment__slider
+						.swiper-wrapper
+							.swiper-slide
+								.equipment__card
+									.swiper.equipment__card-slider
+										.swiper-wrapper
+											.swiper-slide
+												img.equipment__image(src='img/img__equipment_01_01.jpg', alt='')
+										.swiper-pagination.equipment__pagination
+										.swiper-button-next
+											svg.swiper-button-icon
+												use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+										.swiper-button-prev
+											svg.swiper-button-icon
+												use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+									.equipment__card-title Экскаватор Hitachi ZX200-5G
+									.equipment__card-row
+										.equipment__card-info 20 тн / 1 куб ковш
+										.equipment__card-year 2020 г. в.
+										.equipment__card-number г/н АВ 8735 16
+									a.button.equipment__card-button(data-hystmodal="#order") Заказать
+							.swiper-slide
+								.equipment__card
+									.swiper.equipment__card-slider
+										.swiper-wrapper
+											.swiper-slide
+												img.equipment__image(src='img/img__equipment_02_01.jpg', alt='')
+											.swiper-slide
+												img.equipment__image(src='img/img__equipment_02_02.jpg', alt='')
+											.swiper-slide
+												img.equipment__image(src='img/img__equipment_02_03.jpg', alt='')
+										.swiper-pagination.equipment__pagination
+										.swiper-button-next
+											svg.swiper-button-icon
+												use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+										.swiper-button-prev
+											svg.swiper-button-icon
+												use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+									.equipment__card-title Экскаватор Hitachi ZX240LC-5G
+									.equipment__card-row
+										.equipment__card-info 24 тн / 1,4 куб ковш
+										.equipment__card-year 2021 г. в.
+										.equipment__card-number г/н АВ 8735 16
+									a.button.equipment__card-button(data-hystmodal="#order") Заказать
+							.swiper-slide
+								.swiper.equipment__card-slider
+									.swiper-wrapper
+										.swiper-slide
+											img.equipment__image(src='img/img__equipment_03_01.jpg', alt='')
+										.swiper-slide
+											img.equipment__image(src='img/img__equipment_03_02.jpg', alt='')
+										.swiper-slide
+											img.equipment__image(src='img/img__equipment_03_03.jpg', alt='')
+									.swiper-pagination.equipment__pagination
+									.swiper-button-next
+										svg.swiper-button-icon
+											use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+									.swiper-button-prev
+										svg.swiper-button-icon
+											use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+								.equipment__card
+									.equipment__card-title Экскаватор Hitachi ZX330-5G
+									.equipment__card-row
+										.equipment__card-info 34 тн / 1,6 куб ковш
+										.equipment__card-year 2021 г. в.
+										.equipment__card-number г/н АВ 8735 16
+									a.button.equipment__card-button(data-hystmodal="#order") Заказать
+							.swiper-slide
+								.swiper.equipment__card-slider
+									.swiper-wrapper
+										.swiper-slide
+											img.equipment__image(src='img/img__equipment_04_01.jpg', alt='')
+									.swiper-pagination.equipment__pagination
+									.swiper-button-next
+										svg.swiper-button-icon
+											use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+									.swiper-button-prev
+										svg.swiper-button-icon
+											use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+								.equipment__card
+									.equipment__card-title Бульдозер Komatsu D65EX-16
+									.equipment__card-row
+										.equipment__card-info 21 тн / 211 л. с.
+										.equipment__card-year 2021 г. в.
+										.equipment__card-number г/н АВ 8735 16
+									a.button.equipment__card-button(data-hystmodal="#order") Заказать
+					.swiper-button-next.equipment__slider-next
+						svg.swiper-button-icon
+							use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+					.swiper-button-prev.equipment__slider-prev
+						svg.swiper-button-icon
+							use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+	section.team.section
+		#team.section__anchor
+		.grid
+			.section__inner.team__inner
+				.section__label Люди
+				h2.section__title Команда
+				.team__slider-wrap
+					.swiper.team__slider
+						.swiper-wrapper
+							.swiper-slide
+								.team__card
+									.team__card-header
+										img.team__card-avatar(src='img/img__avatar_01.jpg', alt='')
+										.team__card-name Павел Белозёров
+									img.team__card-image(src='img/img__team_01.jpg', alt='')
+									.team__card-info
+										label.team__card-like
+											input.like-checkbox(type='checkbox', checked)
+											.like-icon
+												svg.below(viewBox='0 0 30 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' fill='#E01636' stroke-width='2')
+												svg.front(viewBox='0 0 32 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' stroke='#E01636' stroke-width='2')
+
+										.team__card-message Понравилось вам и ещё #[span 12 людям]
+										.team__card-descr Машинист экскаватора #[br] Стаж работы — 10 лет
+							.swiper-slide
+								.team__card
+									.team__card-header
+										img.team__card-avatar(src='img/img__avatar_02.jpg', alt='')
+										.team__card-name Макар Корнилов
+									img.team__card-image(src='img/img__team_02.jpg', alt='')
+									.team__card-info
+										label.team__card-like
+											input.like-checkbox(type='checkbox')
+											.like-icon
+												svg.below(viewBox='0 0 30 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' fill='#E01636' stroke-width='2')
+												svg.front(viewBox='0 0 32 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' stroke='#E01636' stroke-width='2')
+										.team__card-descr Машинист экскаватора #[br] Стаж работы — 10 лет
+							.swiper-slide
+								.team__card
+									.team__card-header
+										img.team__card-avatar(src='img/img__avatar_03.jpg', alt='')
+										.team__card-name Павел Белозёров
+									img.team__card-image(src='img/img__team_03.jpg', alt='')
+									.team__card-info
+										label.team__card-like
+											input.like-checkbox(type='checkbox', checked)
+											.like-icon
+												svg.below(viewBox='0 0 30 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' fill='#E01636' stroke-width='2')
+												svg.front(viewBox='0 0 32 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' stroke='#E01636' stroke-width='2')
+
+										.team__card-message Понравилось вам и ещё #[span 943 людям]
+										.team__card-descr Машинист экскаватора #[br] Стаж работы — 10 лет
+							.swiper-slide
+								.team__card
+									.team__card-header
+										img.team__card-avatar(src='img/img__avatar_01.jpg', alt='')
+										.team__card-name Павел Белозёров
+									img.team__card-image(src='img/img__team_01.jpg', alt='')
+									.team__card-info
+										label.team__card-like
+											input.like-checkbox(type='checkbox')
+											.like-icon
+												svg.below(viewBox='0 0 30 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' fill='#E01636' stroke-width='2')
+												svg.front(viewBox='0 0 32 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' stroke='#E01636' stroke-width='2')
+
+										.team__card-message Понравилось вам и ещё #[span 943 людям]
+										.team__card-descr Машинист экскаватора #[br] Стаж работы — 10 лет
+							.swiper-slide
+								.team__card
+									.team__card-header
+										img.team__card-avatar(src='img/img__avatar_02.jpg', alt='')
+										.team__card-name Павел Белозёров
+									img.team__card-image(src='img/img__team_02.jpg', alt='')
+									.team__card-info
+										label.team__card-like
+											input.like-checkbox(type='checkbox')
+											.like-icon
+												svg.below(viewBox='0 0 30 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' fill='#E01636' stroke-width='2')
+												svg.front(viewBox='0 0 32 27')
+													path(d='M20.544 1.5C25.3065 1.5 28.5 5.97 28.5 10.1325C28.5 18.582 15.2415 25.5 15 25.5C14.7585 25.5 1.5 18.582 1.5 10.1325C1.5 5.97 4.6935 1.5 9.456 1.5C12.1785 1.5 13.9665 2.8575 15 4.0665C16.0335 2.8575 17.8215 1.5 20.544 1.5Z' stroke='#E01636' stroke-width='2')
+
+										.team__card-message Понравилось вам и ещё #[span 943 людям]
+										.team__card-descr Машинист экскаватора #[br] Стаж работы — 10 лет
+					.swiper-button-next.team__slider-next
+						svg.swiper-button-icon
+							use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+					.swiper-button-prev.team__slider-prev
+						svg.swiper-button-icon
+							use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+	section.join.section
+		.grid
+			.section__inner.join__inner
+				.section__label Присоединяйся
+				h2.section__title Хочешь работать #[br] в нашей команде?
+				form.form.join__form
+					.form__grid
+						.form__text Оставь контакты ниже и мы обязательно перезвоним
+						+field('Имя', 'footer-name')
+						+field_phone('Телефон', 'footer-phone')
+						button.button Отправить
+						.form__small Нажимая кнопку «Отправить» вы соглашаетесь с #[a(href='#') Политикой конфиденциальности] и #[a(href='#') Пользовательским соглашением]
+		img.join__image(src='/img/bg__join.jpg')
+	section.objects
+		#objects.section__anchor
+		.grid
+		.swiper.objects__sliderBack
+			.swiper-wrapper
+				.swiper-slide
+					img.objects__image(src='img/img__object_01.jpg', alt='')
+				.swiper-slide
+					img.objects__image(src='img/img__object_02.jpg', alt='')
+				.swiper-slide
+					img.objects__image(src='img/img__object_03.jpg', alt='')
+			.swiper-pagination.objects__sliderPagination
+			.swiper-button-next
+				svg.swiper-button-icon
+					use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+			.swiper-button-prev
+				svg.swiper-button-icon
+					use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+		.objects__panel
+			.objects__header
+				.section__label В жизни
+				h2.section__title Наши объекты
+			.swiper.objects__sliderFront
+				.swiper-wrapper
+					.swiper-slide
+						.objects__grid
+							.objects__info
+								h3.objects__title М-12
+								.objects__name Строящаяся скоростная автомобильная дорога Москва — Нижний Новгород — Казань
+								.objects__stage 6 этап: км 454 — км 586
+								.objects__descr от пересечения с автомобильной дорогой регионального значения 22К-0162 «Работки – Порецкое» до пересечения с автомобильной дорогой федерального значения А – 151 «Цивильск – Ульяновск»
+								.objects__place Нижегородская область, Чувашская республика
+								.objects__company ООО «Рога и копыта»
+								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
+					.swiper-slide
+						.objects__grid
+							.objects__info
+								h3.objects__title М-12
+								.objects__name Строящаяся скоростная автомобильная дорога Москва — Нижний Новгород — Казань
+								.objects__stage 6 этап: км 454 — км 586
+								.objects__descr от пересечения с автомобильной дорогой регионального значения 22К-0162 «Работки – Порецкое» до пересечения с автомобильной дорогой федерального значения А – 151 «Цивильск – Ульяновск»
+								.objects__place Нижегородская область, Чувашская республика
+								.objects__company ООО «Рога и копыта»
+								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
+					.swiper-slide
+						.objects__grid
+							.objects__info
+								h3.objects__title М-5
+								.objects__name Реконструкция автомобильной дороги М-5 «УРАЛ»
+								.objects__stage км 1360+000 — км 1375+000
+								.objects__descr от Москвы через Рязань, Пензу, Самару, Уфу до Челябинска
+								.objects__place Республика Башкортостан
+								.objects__company ООО «Копыта и рога»
+								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
+
+	#callback.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.popup.hystmodal__window(role='dialog' aria-modal='true')
+				button.popup__close.hystmodal__close(data-hystclose='')
+				.popup__inner
+					.popup__col
+						form.form.popup__form
+							.form__title Заказать звонок
+							.form__text Оставь контакты ниже и мы обязательно перезвоним
+							.form__grid
+								+field('Имя', 'footer-name')
+								+field_phone('Телефон', 'footer-phone')
+								button.button Отправить
+								.form__small Нажимая кнопку «Отправить» вы соглашаетесь с #[a(href='#') Политикой конфиденциальности] и #[a(href='#') Пользовательским соглашением]
+					.popup__col
+						img.popup__img(src='img/img__popup_01.jpg', alt='')
+	#order.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.popup.hystmodal__window(role='dialog' aria-modal='true')
+				button.popup__close.hystmodal__close(data-hystclose='')
+				.popup__inner
+					.popup__col
+						form.form.popup__form
+							.form__title Заказать
+							.form__text Оставь контакты ниже и мы обязательно перезвоним
+							.form__grid
+								+field('Имя', 'footer-name')
+								+field_phone('Телефон', 'footer-phone')
+								button.button Отправить
+								.form__small Нажимая кнопку «Отправить» вы соглашаетесь с #[a(href='#') Политикой конфиденциальности] и #[a(href='#') Пользовательским соглашением]
+					.popup__col
+						img.popup__img(src='img/img__popup_02.jpg', alt='')
+	#thanks.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.popup.popup_thanks.hystmodal__window(role='dialog' aria-modal='true')
+				button.popup__close.hystmodal__close(data-hystclose='')
+				.popup__inner
+					.popup__col
+						.popup__title Спасибо
+						.popup__text Мы скоро свяжемся с вами!
+	#review.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.popup.hystmodal__window(role='dialog' aria-modal='true')
+				button.popup__close.hystmodal__close(data-hystclose='')
+				.popup__inner
+					.popup__col
+						.popup__title Отзыв

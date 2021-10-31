@@ -1,0 +1,36 @@
+.footer
+	#footer.footer__anchor
+	.grid
+		.footer__inner
+			.footer__top
+				svg.svg.footer__logo
+					use(xlink:href='img/svgSprite.svg#akme__logo')
+				.footer__info
+					.footer__info-item
+						.footer__info-title Телефон
+						a.footer__info-link(href='tel:89673778788') 8 (967) 377-87-88
+					.footer__info-item
+						.footer__info-title Электронная почта
+						a.footer__info-link(href='mailto:2598080@gmail.com') 2598080@gmail.com
+					.footer__info-item
+						.footer__info-title Адрес
+						.footer__info-text 420101, Республика Татарстан, г. Казань, ул. Карбышева, д. 47
+					.footer__info-item
+						.footer__info-title ИНН/ОГРН
+						.footer__info-text 123456789012
+					.footer__info-item
+						.footer__info-title Р/С
+						.footer__info-text 100010100010
+				form.form.footer__form
+					.form__title Остались вопросы?
+					.form__grid
+						+field('Имя', 'footer-name')
+						+field_phone('Телефон', 'footer-phone')
+						button.button Отправить
+						.form__small Нажимая кнопку «Отправить» вы соглашаетесь с #[a(href='#') Политикой конфиденциальности] и #[a(href='#') Пользовательским соглашением]
+			.footer__bottom
+				.footer__copy 2021 © АКМЕ
+				.footer__links
+					a.footer__link(href='#') Пользовательское соглашение
+					a.footer__link(href='#') Политика конфиденциальности
+

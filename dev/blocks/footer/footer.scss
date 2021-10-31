@@ -1,0 +1,190 @@
+// В этом файле должны быть стили для БЭМ-блока footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer {
+	overflow: hidden;
+	position: relative;
+	&__anchor {
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: -128px;
+		width: 10px;
+		@media (min-width: $screen-sm) {
+			top: -136px;
+		}
+		@media (min-width: $screen-md) {
+			top: -160px;
+		}
+		@media (min-width: $screen-lg) {
+			top: -176px;
+		}
+		@media (min-width: $screen-xl) {
+			top: -128px;
+		}
+	}
+	&__inner {}
+	&__top {
+		display: grid;
+		grid-gap: 72px;
+		grid-template-areas: 'form form' 'info logo';
+		padding: 40px 0;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			grid-gap: 32px;
+			grid-template-areas:
+				'logo form'
+				'info form';
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (min-width: $screen-md) {
+			grid-gap: 0;
+			grid-template-areas:
+				'logo . form'
+				'info . form';
+			grid-template-columns: 2fr 1fr 2fr;
+			padding: 56px 0 40px;
+		}
+		@media (min-width: $screen-lg) {
+			grid-gap: 0;
+			grid-template-areas: 'logo info form';
+			grid-template-columns: 1fr 2fr 1fr;
+		}
+		@media (min-width: $screen-xl) {
+			grid-template-columns: 1fr 2fr 1fr;
+		}
+	}
+	&__bottom {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 24px 0;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 32px 0;
+		}
+		&::before {
+			background: var(--colot_text_muted);
+			content: '';
+			display: block;
+			height: 1px;
+			opacity: .35;
+			position: absolute;
+			top: 0;
+			transform: translateX(-12.5%);
+			width: 100%;
+			@media (min-width: $screen-lg) {
+				width: 125%;
+			}
+		}
+	}
+	&__logo {
+		aspect-ratio: 182/104;
+		fill: var(--color_brand);
+		grid-area: logo;
+		position: absolute;
+		right: 0;
+		top: -8px;
+		width: clamp(112px, 20vw, 182px);
+		@media (min-width: $screen-sm) {
+			position: relative;
+			top: -16px;
+		}
+	}
+	&__info {
+		display: grid;
+		grid-area: info;
+		grid-gap: 8px;
+		width: 100%;
+		@media (min-width: $screen-lg) {
+			align-self: start;
+			grid-gap: 16px;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&__info-item {
+		order: 1;
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3) {
+			order: 2;
+		}
+		@media (min-width: $screen-lg) {
+			&:nth-child(1) {
+				order: 1;
+			}
+			&:nth-child(2) {
+				order: 2;
+			}
+			&:nth-child(3) {
+				order: 3;
+			}
+			&:nth-child(4) {
+				order: 2;
+			}
+		}
+	}
+	&__info-title {
+		color: var(--colot_text_muted);
+		font-size: 10px;
+		font-weight: 500;
+		letter-spacing: 0.04em;
+		line-height: 160%;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+	}
+	&__info-link,
+	&__info-text {
+		color: var(--color_brand);
+		font-size: 16px;
+		font-feature-settings: 'pnum' on, 'lnum' on, 'case' on, 'cpsp' on, 'ordn' on;
+		letter-spacing: 0.01em;
+		line-height: 125%;
+		margin-top: 4px;
+		text-decoration: none;
+	}
+	&__info-link:hover {
+		text-decoration: underline;
+	}
+	&__form {
+		grid-area: form;
+		max-width: 304px;
+	}
+	&__copy {
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 100%;
+		margin-top: 24px;
+		@media (min-width: $screen-sm) {
+			margin: 0;
+		}
+	}
+	&__links {
+		display: grid;
+		justify-items: start;
+		grid-gap: 8px;
+		@media (min-width: $screen-sm) {
+			grid-gap: 32px;
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (min-width: $screen-md) {
+			grid-gap: 48px;
+		}
+	}
+	&__link {
+		color: var(--color_brand);
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 133%;
+		text-decoration-line: underline;
+		@media (min-width: $screen-xl) {
+			text-align: right;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

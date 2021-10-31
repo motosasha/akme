@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока about, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about {
+	&__inner {
+		padding: 48px 0;
+		transition: padding .25s ease;
+		@media (min-width: $screen-md) {
+			padding: 72px 0;
+		}
+		@media (min-width: $screen-xl) {
+			padding: 88px 0;
+		}
+		@media (min-width: $screen-xxl) {
+			padding: 112px 0;
+		}
+	}
+	&__grid {
+		display: grid;
+		grid-gap: 32px;
+		@media (min-width: $screen-md) {
+			grid-auto-flow: row dense;
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (min-width: $screen-lg) {
+			//padding: 0 32px;
+		}
+		@media (min-width: $screen-xl) {
+			grid-gap: 56px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+	&__item {
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: 96px auto;
+		max-width: 350px;
+		@media (min-width: $screen-md) {
+			grid-column-start: 1;
+			&:nth-child(n+4) {
+				grid-column-start: 2;
+			}
+		}
+		@media (min-width: $screen-xl) {
+			grid-column-start: auto !important;
+		}
+	}
+	&__item-frame {
+		align-items: center;
+		background: url('/img/about__frame_orange.svg') no-repeat;
+		background-size: cover;
+		display: flex;
+		justify-content: center;
+		height: 88px;
+		padding-right: 8px;
+		width: 96px;
+	}
+	&__item:nth-child(even) &__item-frame {
+		background: url('/img/about__frame_blue.svg') no-repeat;
+	}
+	&__item-icon {
+		height: 64px;
+		width: 64px;
+	}
+	&__item-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+	&__item-label {
+		color: var(--colot_text_muted);
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		line-height: 115%;
+	}
+	&__item-title {
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		line-height: 115%;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+			line-height: 100%;
+		}
+	}
+}

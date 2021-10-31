@@ -1,0 +1,32 @@
+:root {
+	--color_accent: #f36017;
+	--color_accent_hover: #e9560c;
+	--color_brand: #0a285e;
+	--color_text: #020a17;
+	--colot_text_muted: #737c8c;
+	--color_text_invert: #fff;
+	--color_bg_white: #fff;
+	--color_bg_grey: #f1f6fe;
+	--color_bg_blue: #0a285e;
+	--color_error: #e01636;
+
+	--color_grid_lines: rgba(2, 10, 23, 0.05);
+
+	--color_black: #000;
+	--color_white: #fff;
+
+	--body_bg: var(--color_bg_white);
+	--body_color: var(--color_text);
+
+	--font_base: var(--font_primary);
+	--font_primary: 'GolosText', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+	--font_size_root: null;
+	--font_size_base: 1rem;
+	--font_weight_base: 400;
+
+	--line_height_base: 100%;
+
+	--min-width: 320;
+	--max-width: 1536; // Ширина макета
+}

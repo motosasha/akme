@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока field, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.field {
+	position: relative;
+	&__label {
+		color: var(--colot_text_muted);
+		font-size: 14px;
+		left: 12px;
+		line-height: 115%;
+		margin: 0;
+		padding: 0 8px;
+		position: absolute;
+		top: 50%;
+		transform: translate3d(0, -50%, 0);
+		transition: all .4s cubic-bezier(.05, .88, .36, .99);
+	}
+	&__input {}
+
+
+	/*&__label {
+		@include field-label;
+		margin-bottom: 8px;
+		@media (min-width: $screen-lg) {
+			margin-bottom: 12px;
+		}
+	}
+	&__input {}
+	&__info {
+		color: #f9313b;
+		display: none;
+		@include field-info;
+		margin-top: 4px;
+	}
+	&__row {
+		display: grid;
+		grid-gap: 8px;
+		grid-template-columns: 80px 80px;
+	}*/
+}

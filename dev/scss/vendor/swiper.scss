@@ -1,0 +1,70 @@
+.swiper-pagination-bullet {
+	align-items: center;
+	background: none;
+	border: 2px solid transparent;
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: center;
+	height: 16px;
+	margin: 0 !important;
+	opacity: 1;
+	transition: all .5s ease;
+	width: 16px;
+	+ .swiper-pagination-bullet {
+		margin-left: 12px !important;
+	}
+	&::before {
+		background: var(--color_text_invert);
+		border-radius: 50%;
+		content: '';
+		display: block;
+		height: 8px;
+		transition: all .25s ease;
+		width: 8px;
+	}
+	&-active {
+		border: 2px solid var(--color_accent);
+		&::before {
+			height: 4px;
+			width: 4px;
+		}
+	}
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	align-items: center;
+	border: 2px solid var(--color_accent);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	height: 40px;
+	left: 50%;
+	right: auto;
+	top: auto;
+	width: 40px;
+	&::after {
+		content: none;
+	}
+	@media (min-width: $screen-xl) {
+		.objects & {
+			height: 80px;
+			width: 80px;
+		}
+	}
+}
+.swiper-button-prev {
+	background: var(--color_accent);
+	transform: translateX(calc(-50vw + 16px));
+}
+
+.swiper-button-icon {
+	height: 24px;
+	width: 24px;
+	@media (min-width: $screen-xl) {
+		.objects & {
+			height: 40px;
+			width: 40px;
+		}
+	}
+}

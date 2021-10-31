@@ -1,0 +1,134 @@
+// В этом файле должны быть стили для БЭМ-блока hero, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.hero {
+	--color_grid_lines: rgba(255, 255, 255, 0.1);
+
+	background: url('/img/bg__hero.jpg') 30% center no-repeat;
+	background-size: cover;
+	color: var(--color_text_invert);
+	height: 100vh;
+	min-height: 560px;
+
+	@media (min-width: $screen-md) {
+		background: url('/img/bg__hero.jpg') center bottom no-repeat;
+		background-size: cover;
+	}
+	&__inner {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		padding: 152px 0 16px;
+		@media (min-width: $screen-sm) {
+			padding: 240px 0 24px;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 240px 0 72px;
+		}
+		@media (min-width: $screen-xl) {
+			padding: 200px 0 72px;
+		}
+	}
+	&__info {
+		position: relative;
+	}
+	&__title {
+		font-feature-settings: 'tnum' on, 'lnum' on;
+		@include clamp(40, 64);
+		font-weight: 700;
+		letter-spacing: 0.0075em;
+		line-height: 120%;
+		margin: 0;
+	}
+	&__bubble {
+		border: 2px solid var(--color_text_invert);
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 125%;
+		margin-top: 12px;
+		padding: 10px 16px 12px;
+		width: 200px;
+		@media (min-width: $screen-md) {
+			background: url('/img/hero__bubble.svg') no-repeat;
+			background-size: cover;
+			border: none;
+			margin-top: 0;
+			padding: 10px 16px 12px 24px;
+			position: absolute;
+			right: -208px;
+			top: -24px;
+		}
+	}
+	&__frame {
+		border: 2px solid var(--color_text_invert);
+		color: var(--color_text_invert);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 26px 14px 14px;
+		position: relative;
+		text-decoration: none;
+		transition: transform .25s ease;
+		width: calc(100% - 32px);
+		@media (min-width: $screen-lg) {
+			align-self: flex-end;
+			height: 304px;
+			justify-self: flex-end;
+			padding: 34px 54px;
+			width: 25%;
+		}
+		&:hover {
+			transform: translateY(-4px);
+		}
+	}
+	&__frame-title {
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		line-height: 150%;
+		text-transform: uppercase;
+	}
+	&__frame-date {
+		color: var(--color_accent);
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		font-size: 16px;
+		line-height: 100%;
+	}
+	&__frame-icon {
+		bottom: 12px;
+		height: 24px;
+		position: absolute;
+		right: 12px;
+		transition: transform .25s ease;
+		width: 24px;
+		@media (min-width: $screen-lg) {
+			bottom: 24px;
+			left: 24px;
+			right: auto;
+		}
+	}
+	&__frame:hover &__frame-icon {
+		@media (min-width: $screen-xl) {
+			animation: arrow_down 1s ease-in-out infinite;
+			transform: translateY(-16px);
+		}
+	}
+
+	@keyframes arrow_down {
+		0% {
+			transform: translate(0, -16px);
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			transform: translate(0, 16px);
+			opacity: 0;
+		}
+	}
+}

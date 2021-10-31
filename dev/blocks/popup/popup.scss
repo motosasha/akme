@@ -1,0 +1,72 @@
+// В этом файле должны быть стили для БЭМ-блока popup, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.popup {
+	background: var(--color_bg_white);
+	max-width: 328px;
+	padding: 32px 24px;
+	width: 90%;
+	@media (min-width: $screen-md) {
+		max-width: 720px;
+		padding: 48px 48px 40px;
+	}
+	&_thanks {
+		max-width: 520px !important;
+	}
+	&__close {
+		background: url('/img/icon__close.svg') center no-repeat;
+		border: none;
+		cursor: pointer;
+		display: block;
+		height: 24px;
+		outline: none;
+		position: absolute;
+		right: 24px;
+		top: 24px;
+		width: 24px;
+		z-index: 10;
+	}
+	&__form {
+		max-width: 304px;
+	}
+	.form__title {
+		font-size: clamp(32px, 2vw, 40px);
+		width: 80%;
+	}
+	&__inner {
+		display: flex;
+	}
+	&__col {
+		flex: 1 1 auto;
+	}
+	&__col + &__col {
+		display: none;
+		flex: 0 0 auto;
+		width: 272px;
+		@media (min-width: $screen-md) {
+			display: block;
+			padding-top: 24px;
+		}
+	}
+	&__img {
+		display: block;
+		height: calc(100% + 40px);
+		margin-bottom: -40px;
+		object-fit: cover;
+		width: calc(100% + 48px);
+	}
+	&__title {
+		color: var(--color_brand);
+		font-size: clamp(32px, 2vw, 40px);
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		line-height: 100%;
+		margin-bottom: 32px;
+	}
+	&__text {
+		font-size: 16px;
+		letter-spacing: 0.01em;
+		line-height: 125%;
+	}
+}
