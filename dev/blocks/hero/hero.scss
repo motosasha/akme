@@ -4,15 +4,13 @@
 
 .hero {
 	--color_grid_lines: rgba(255, 255, 255, 0.1);
-
-	background: url('/img/bg__hero.jpg') 30% center no-repeat;
+	background: url('../img/bg__hero.jpg') 30% center no-repeat;
 	background-size: cover;
 	color: var(--color_text_invert);
 	height: 100vh;
 	min-height: 560px;
-
 	@media (min-width: $screen-md) {
-		background: url('/img/bg__hero.jpg') center bottom no-repeat;
+		background: url('../img/bg__hero.jpg') center bottom no-repeat;
 		background-size: cover;
 	}
 	&__inner {
@@ -53,7 +51,7 @@
 		padding: 10px 16px 12px;
 		width: 200px;
 		@media (min-width: $screen-md) {
-			background: url('/img/hero__bubble.svg') no-repeat;
+			background: url('../img/hero__bubble.svg') no-repeat;
 			background-size: cover;
 			border: none;
 			margin-top: 0;

@@ -48,7 +48,7 @@
 	}
 	&__item-frame {
 		align-items: center;
-		background: url('/img/about__frame_orange.svg') no-repeat;
+		background: url('../img/about__frame_orange.svg') no-repeat;
 		background-size: cover;
 		display: flex;
 		justify-content: center;
@@ -57,7 +57,7 @@
 		width: 96px;
 	}
 	&__item:nth-child(even) &__item-frame {
-		background: url('/img/about__frame_blue.svg') no-repeat;
+		background: url('../img/about__frame_blue.svg') no-repeat;
 	}
 	&__item-icon {
 		height: 64px;

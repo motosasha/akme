@@ -68,6 +68,7 @@
 		grid-auto-flow: column;
 		grid-gap: clamp(24px, 5vw, 56px);
 		height: 300%;
+		list-style: none;
 		overflow: hidden;
 -webkit-overflow-scrolling: touch;
 		overflow-x: scroll;
@@ -80,6 +81,7 @@
 		}
 		@media (min-width: $screen-lg) {
 			grid-gap: clamp(24px, 3vw, 56px);
+			overflow: hidden;
 		}
 	}
 	&__nav-link {
