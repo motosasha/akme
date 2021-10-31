@@ -35,7 +35,7 @@
 	}
 	&__title {
 		font-feature-settings: 'tnum' on, 'lnum' on;
-		@include clamp(40, 64);
+		font-size: clamp(40px, 2vw, 64px);
 		font-weight: 700;
 		letter-spacing: 0.0075em;
 		line-height: 120%;

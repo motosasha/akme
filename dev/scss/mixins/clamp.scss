@@ -1,5 +1,0 @@
-@mixin clamp($mobile, $desktop) {
-	$diff: $desktop - $mobile;
-	$width: var(--max-width) - var(--min-width);
-	font-size: calc(#{$mobile + px} + #{$diff} * ((100vw - 320px) / #{$width}));
-}
