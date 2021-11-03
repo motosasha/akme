@@ -125,117 +125,121 @@
 				</section>
 				<section class="equipment section">
 					<div class="section__anchor" id="equipment"></div>
+					<div data-foo="1"></div>
+					<div data-foo="2"></div>
 					<div class="grid">
 						<div class="section__inner equipment__inner">
 							<div class="section__label">Оборудование</div>
 							<h2 class="section__title">Наша техника</h2>
+							<div class="equipment__triggers">
+								<div class="equipment__trigger equipment__trigger_active" data-tab="excavator">Экскаваторы</div>
+								<div class="equipment__trigger" data-tab="bulldozer">Бульдозеры</div>
+							</div>
 							<div class="equipment__slider-wrap">
-								<div class="equipment__triggers">
-									<div class="equipment__trigger equipment__trigger_active excavatorTrigger">Экскаваторы</div>
-									<div class="equipment__trigger bulldozerTrigger">Бульдозеры</div>
-								</div>
-								<div class="swiper equipment__slider">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="equipment__card">
-												<div class="swiper equipment__card-slider">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_01_01.jpg" alt=""></div>
+								<div class="equipment__tab equipment__tab_active" data-target="excavator">
+									<div class="swiper equipment__slider equipment__slider_excavator">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="equipment__card">
+													<div class="swiper equipment__card-slider">
+														<div class="swiper-wrapper"><a class="swiper-slide" data-fslightbox="ex1" href="img/img__equipment_01_01b.jpg"><img class="equipment__image" src="img/img__equipment_01_01.jpg" alt=""></a></div>
+														<div class="swiper-pagination equipment__pagination"></div>
+														<div class="swiper-button-next"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
+															</svg></div>
+														<div class="swiper-button-prev"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
+															</svg></div>
 													</div>
-													<div class="swiper-pagination equipment__pagination"></div>
-													<div class="swiper-button-next"><svg class="swiper-button-icon">
-															<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
-														</svg></div>
-													<div class="swiper-button-prev"><svg class="swiper-button-icon">
-															<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
-														</svg></div>
+													<div class="equipment__card-title">Экскаватор Hitachi ZX200-5G</div>
+													<div class="equipment__card-row">
+														<div class="equipment__card-info">20 тн / 1 куб ковш</div>
+														<div class="equipment__card-year">2020 г. в.</div>
+														<div class="equipment__card-number">г/н АВ 8735 16</div>
+													</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
 												</div>
-												<div class="equipment__card-title">Экскаватор Hitachi ZX200-5G</div>
-												<div class="equipment__card-row">
-													<div class="equipment__card-info">20 тн / 1 куб ковш</div>
-													<div class="equipment__card-year">2020 г. в.</div>
-													<div class="equipment__card-number">г/н АВ 8735 16</div>
-												</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
 											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="equipment__card">
-												<div class="swiper equipment__card-slider">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_02_01.jpg" alt=""></div>
-														<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_02_02.jpg" alt=""></div>
-														<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_02_03.jpg" alt=""></div>
+											<div class="swiper-slide">
+												<div class="equipment__card">
+													<div class="swiper equipment__card-slider">
+														<div class="swiper-wrapper"><a class="swiper-slide" data-fslightbox="ex2" href="img/img__equipment_02_01b.jpg"><img class="equipment__image" src="img/img__equipment_02_01.jpg" alt=""></a><a class="swiper-slide" data-fslightbox="ex2" href="img/img__equipment_02_02b.jpg"><img class="equipment__image" src="img/img__equipment_02_02.jpg" alt=""></a><a class="swiper-slide" data-fslightbox="ex2" href="img/img__equipment_02_03b.jpg"><img class="equipment__image" src="img/img__equipment_02_03.jpg" alt=""></a></div>
+														<div class="swiper-pagination equipment__pagination"></div>
+														<div class="swiper-button-next"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
+															</svg></div>
+														<div class="swiper-button-prev"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
+															</svg></div>
 													</div>
-													<div class="swiper-pagination equipment__pagination"></div>
-													<div class="swiper-button-next"><svg class="swiper-button-icon">
-															<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
-														</svg></div>
-													<div class="swiper-button-prev"><svg class="swiper-button-icon">
-															<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
-														</svg></div>
+													<div class="equipment__card-title">Экскаватор Hitachi ZX240LC-5G</div>
+													<div class="equipment__card-row">
+														<div class="equipment__card-info">24 тн / 1,4 куб ковш</div>
+														<div class="equipment__card-year">2021 г. в.</div>
+														<div class="equipment__card-number">г/н АВ 8735 16</div>
+													</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
 												</div>
-												<div class="equipment__card-title">Экскаватор Hitachi ZX240LC-5G</div>
-												<div class="equipment__card-row">
-													<div class="equipment__card-info">24 тн / 1,4 куб ковш</div>
-													<div class="equipment__card-year">2021 г. в.</div>
-													<div class="equipment__card-number">г/н АВ 8735 16</div>
-												</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
 											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper equipment__card-slider">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_03_01.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_03_02.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_03_03.jpg" alt=""></div>
+											<div class="swiper-slide">
+												<div class="equipment__card">
+													<div class="swiper equipment__card-slider">
+														<div class="swiper-wrapper"><a class="swiper-slide" data-fslightbox="ex3" href="img/img__equipment_03_01b.jpg"><img class="equipment__image" src="img/img__equipment_03_01.jpg" alt=""></a><a class="swiper-slide" data-fslightbox="ex3" href="img/img__equipment_03_02b.jpg"><img class="equipment__image" src="img/img__equipment_03_02.jpg" alt=""></a><a class="swiper-slide" data-fslightbox="ex3" href="img/img__equipment_03_03b.jpg"><img class="equipment__image" src="img/img__equipment_03_03.jpg" alt=""></a></div>
+														<div class="swiper-pagination equipment__pagination"></div>
+														<div class="swiper-button-next"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
+															</svg></div>
+														<div class="swiper-button-prev"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
+															</svg></div>
+													</div>
+													<div class="equipment__card-title">Экскаватор Hitachi ZX330-5G</div>
+													<div class="equipment__card-row">
+														<div class="equipment__card-info">34 тн / 1,6 куб ковш</div>
+														<div class="equipment__card-year">2021 г. в.</div>
+														<div class="equipment__card-number">г/н АВ 8735 16</div>
+													</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
 												</div>
-												<div class="swiper-pagination equipment__pagination"></div>
-												<div class="swiper-button-next"><svg class="swiper-button-icon">
-														<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
-													</svg></div>
-												<div class="swiper-button-prev"><svg class="swiper-button-icon">
-														<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
-													</svg></div>
-											</div>
-											<div class="equipment__card">
-												<div class="equipment__card-title">Экскаватор Hitachi ZX330-5G</div>
-												<div class="equipment__card-row">
-													<div class="equipment__card-info">34 тн / 1,6 куб ковш</div>
-													<div class="equipment__card-year">2021 г. в.</div>
-													<div class="equipment__card-number">г/н АВ 8735 16</div>
-												</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper equipment__card-slider">
-												<div class="swiper-wrapper">
-													<div class="swiper-slide"><img class="equipment__image" src="img/img__equipment_04_01.jpg" alt=""></div>
-												</div>
-												<div class="swiper-pagination equipment__pagination"></div>
-												<div class="swiper-button-next"><svg class="swiper-button-icon">
-														<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
-													</svg></div>
-												<div class="swiper-button-prev"><svg class="swiper-button-icon">
-														<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
-													</svg></div>
-											</div>
-											<div class="equipment__card">
-												<div class="equipment__card-title">Бульдозер Komatsu D65EX-16</div>
-												<div class="equipment__card-row">
-													<div class="equipment__card-info">21 тн / 211 л. с.</div>
-													<div class="equipment__card-year">2021 г. в.</div>
-													<div class="equipment__card-number">г/н АВ 8735 16</div>
-												</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
 											</div>
 										</div>
 									</div>
+									<div class="swiper-button-next equipment__slider-next equipment__slider-next_excavator"><svg class="swiper-button-icon">
+											<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
+										</svg></div>
+									<div class="swiper-button-prev equipment__slider-prev equipment__slider-prev_excavator"><svg class="swiper-button-icon">
+											<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
+										</svg></div>
 								</div>
-								<div class="swiper-button-next equipment__slider-next"><svg class="swiper-button-icon">
-										<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
-									</svg></div>
-								<div class="swiper-button-prev equipment__slider-prev"><svg class="swiper-button-icon">
-										<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
-									</svg></div>
+								<div class="equipment__tab" data-target="bulldozer">
+									<div class="swiper equipment__slider equipment__slider_bulldozer">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="equipment__card">
+													<div class="swiper equipment__card-slider">
+														<div class="swiper-wrapper"><a class="swiper-slide" data-fslightbox="doz1" href="img/img__equipment_04_01b.jpg"><img class="equipment__image" src="img/img__equipment_04_01.jpg" alt=""></a></div>
+														<div class="swiper-pagination equipment__pagination"></div>
+														<div class="swiper-button-next"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
+															</svg></div>
+														<div class="swiper-button-prev"><svg class="swiper-button-icon">
+																<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
+															</svg></div>
+													</div>
+													<div class="equipment__card-title">Бульдозер Komatsu D65EX-16</div>
+													<div class="equipment__card-row">
+														<div class="equipment__card-info">21 тн / 211 л. с.</div>
+														<div class="equipment__card-year">2021 г. в.</div>
+														<div class="equipment__card-number">г/н АВ 8735 16</div>
+													</div><a class="button equipment__card-button" data-hystmodal="#order">Заказать</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-button-next equipment__slider-next equipment__slider-next_bulldozer"><svg class="swiper-button-icon">
+											<use xlink:href="img/svgSprite.svg#icon__arrow_left"></use>
+										</svg></div>
+									<div class="swiper-button-prev equipment__slider-prev equipment__slider-prev_bulldozer"><svg class="swiper-button-icon">
+											<use xlink:href="img/svgSprite.svg#icon__arrow_right"></use>
+										</svg></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -363,7 +367,6 @@
 				</section>
 				<section class="objects">
 					<div class="section__anchor" id="objects"></div>
-					<div class="grid"></div>
 					<div class="swiper objects__sliderBack">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide"><img class="objects__image" src="img/img__object_01.jpg" alt=""></div>

@@ -6,15 +6,6 @@
 	background: var(--color_text);
 	overflow: hidden;
 	position: relative;
-	.grid {
-		--color_grid_lines: rgba(255, 255, 255, 0.05);
-		height: 100%;
-		left: 50%;
-		pointer-events: none;
-		position: absolute;
-		transform: translateX(-50%);
-		z-index: 3;
-	}
 	&__sliderBack {
 		width: 100%;
 		.swiper-slide::before {

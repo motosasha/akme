@@ -3,7 +3,6 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .hero {
-	--color_grid_lines: rgba(255, 255, 255, 0.1);
 	background: url('../img/bg__hero.jpg') 30% center no-repeat;
 	background-size: cover;
 	color: var(--color_text_invert);

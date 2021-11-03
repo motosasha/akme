@@ -29,106 +29,118 @@ block pageMain
 					])
 	section.equipment.section
 		#equipment.section__anchor
+		div(data-foo="1")
+		div(data-foo="2")
 		.grid
 			.section__inner.equipment__inner
 				.section__label Оборудование
 				h2.section__title Наша техника
+				.equipment__triggers
+					.equipment__trigger.equipment__trigger_active(data-tab="excavator") Экскаваторы
+					.equipment__trigger(data-tab="bulldozer") Бульдозеры
 				.equipment__slider-wrap
-					.equipment__triggers
-						.equipment__trigger.equipment__trigger_active.excavatorTrigger Экскаваторы
-						.equipment__trigger.bulldozerTrigger Бульдозеры
-					.swiper.equipment__slider
-						.swiper-wrapper
-							.swiper-slide
-								.equipment__card
-									.swiper.equipment__card-slider
-										.swiper-wrapper
-											.swiper-slide
-												img.equipment__image(src='img/img__equipment_01_01.jpg', alt='')
-										.swiper-pagination.equipment__pagination
-										.swiper-button-next
-											svg.swiper-button-icon
-												use(xlink:href='img/svgSprite.svg#icon__arrow_left')
-										.swiper-button-prev
-											svg.swiper-button-icon
-												use(xlink:href='img/svgSprite.svg#icon__arrow_right')
-									.equipment__card-title Экскаватор Hitachi ZX200-5G
-									.equipment__card-row
-										.equipment__card-info 20 тн / 1 куб ковш
-										.equipment__card-year 2020 г. в.
-										.equipment__card-number г/н АВ 8735 16
-									a.button.equipment__card-button(data-hystmodal="#order") Заказать
-							.swiper-slide
-								.equipment__card
-									.swiper.equipment__card-slider
-										.swiper-wrapper
-											.swiper-slide
-												img.equipment__image(src='img/img__equipment_02_01.jpg', alt='')
-											.swiper-slide
-												img.equipment__image(src='img/img__equipment_02_02.jpg', alt='')
-											.swiper-slide
-												img.equipment__image(src='img/img__equipment_02_03.jpg', alt='')
-										.swiper-pagination.equipment__pagination
-										.swiper-button-next
-											svg.swiper-button-icon
-												use(xlink:href='img/svgSprite.svg#icon__arrow_left')
-										.swiper-button-prev
-											svg.swiper-button-icon
-												use(xlink:href='img/svgSprite.svg#icon__arrow_right')
-									.equipment__card-title Экскаватор Hitachi ZX240LC-5G
-									.equipment__card-row
-										.equipment__card-info 24 тн / 1,4 куб ковш
-										.equipment__card-year 2021 г. в.
-										.equipment__card-number г/н АВ 8735 16
-									a.button.equipment__card-button(data-hystmodal="#order") Заказать
-							.swiper-slide
-								.swiper.equipment__card-slider
-									.swiper-wrapper
-										.swiper-slide
-											img.equipment__image(src='img/img__equipment_03_01.jpg', alt='')
-										.swiper-slide
-											img.equipment__image(src='img/img__equipment_03_02.jpg', alt='')
-										.swiper-slide
-											img.equipment__image(src='img/img__equipment_03_03.jpg', alt='')
-									.swiper-pagination.equipment__pagination
-									.swiper-button-next
-										svg.swiper-button-icon
-											use(xlink:href='img/svgSprite.svg#icon__arrow_left')
-									.swiper-button-prev
-										svg.swiper-button-icon
-											use(xlink:href='img/svgSprite.svg#icon__arrow_right')
-								.equipment__card
-									.equipment__card-title Экскаватор Hitachi ZX330-5G
-									.equipment__card-row
-										.equipment__card-info 34 тн / 1,6 куб ковш
-										.equipment__card-year 2021 г. в.
-										.equipment__card-number г/н АВ 8735 16
-									a.button.equipment__card-button(data-hystmodal="#order") Заказать
-							.swiper-slide
-								.swiper.equipment__card-slider
-									.swiper-wrapper
-										.swiper-slide
-											img.equipment__image(src='img/img__equipment_04_01.jpg', alt='')
-									.swiper-pagination.equipment__pagination
-									.swiper-button-next
-										svg.swiper-button-icon
-											use(xlink:href='img/svgSprite.svg#icon__arrow_left')
-									.swiper-button-prev
-										svg.swiper-button-icon
-											use(xlink:href='img/svgSprite.svg#icon__arrow_right')
-								.equipment__card
-									.equipment__card-title Бульдозер Komatsu D65EX-16
-									.equipment__card-row
-										.equipment__card-info 21 тн / 211 л. с.
-										.equipment__card-year 2021 г. в.
-										.equipment__card-number г/н АВ 8735 16
-									a.button.equipment__card-button(data-hystmodal="#order") Заказать
-					.swiper-button-next.equipment__slider-next
-						svg.swiper-button-icon
-							use(xlink:href='img/svgSprite.svg#icon__arrow_left')
-					.swiper-button-prev.equipment__slider-prev
-						svg.swiper-button-icon
-							use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+					.equipment__tab.equipment__tab_active(data-target='excavator')
+						.swiper.equipment__slider.equipment__slider_excavator
+							.swiper-wrapper
+								.swiper-slide
+									.equipment__card
+										.swiper.equipment__card-slider
+											.swiper-wrapper
+												a.swiper-slide(data-fslightbox='ex1' href='img/img__equipment_01_01b.jpg')
+													img.equipment__image(src='img/img__equipment_01_01.jpg', alt='')
+											.swiper-pagination.equipment__pagination
+											.swiper-button-next
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+											.swiper-button-prev
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+										.equipment__card-title Экскаватор Hitachi ZX200-5G
+										.equipment__card-row
+											.equipment__card-info 20 тн / 1 куб ковш
+											.equipment__card-year 2020 г. в.
+											.equipment__card-number г/н АВ 8735 16
+										a.button.equipment__card-button(data-hystmodal="#order") Заказать
+								.swiper-slide
+									.equipment__card
+										.swiper.equipment__card-slider
+											.swiper-wrapper
+												a.swiper-slide(data-fslightbox='ex2' href='img/img__equipment_02_01b.jpg')
+													img.equipment__image(src='img/img__equipment_02_01.jpg', alt='')
+												a.swiper-slide(data-fslightbox='ex2' href='img/img__equipment_02_02b.jpg')
+													img.equipment__image(src='img/img__equipment_02_02.jpg', alt='')
+												a.swiper-slide(data-fslightbox='ex2' href='img/img__equipment_02_03b.jpg')
+													img.equipment__image(src='img/img__equipment_02_03.jpg', alt='')
+											.swiper-pagination.equipment__pagination
+											.swiper-button-next
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+											.swiper-button-prev
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+										.equipment__card-title Экскаватор Hitachi ZX240LC-5G
+										.equipment__card-row
+											.equipment__card-info 24 тн / 1,4 куб ковш
+											.equipment__card-year 2021 г. в.
+											.equipment__card-number г/н АВ 8735 16
+										a.button.equipment__card-button(data-hystmodal="#order") Заказать
+								.swiper-slide
+									.equipment__card
+										.swiper.equipment__card-slider
+											.swiper-wrapper
+												a.swiper-slide(data-fslightbox='ex3' href='img/img__equipment_03_01b.jpg')
+													img.equipment__image(src='img/img__equipment_03_01.jpg', alt='')
+												a.swiper-slide(data-fslightbox='ex3' href='img/img__equipment_03_02b.jpg')
+													img.equipment__image(src='img/img__equipment_03_02.jpg', alt='')
+												a.swiper-slide(data-fslightbox='ex3' href='img/img__equipment_03_03b.jpg')
+													img.equipment__image(src='img/img__equipment_03_03.jpg', alt='')
+											.swiper-pagination.equipment__pagination
+											.swiper-button-next
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+											.swiper-button-prev
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+										.equipment__card-title Экскаватор Hitachi ZX330-5G
+										.equipment__card-row
+											.equipment__card-info 34 тн / 1,6 куб ковш
+											.equipment__card-year 2021 г. в.
+											.equipment__card-number г/н АВ 8735 16
+										a.button.equipment__card-button(data-hystmodal="#order") Заказать
+						.swiper-button-next.equipment__slider-next.equipment__slider-next_excavator
+							svg.swiper-button-icon
+								use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+						.swiper-button-prev.equipment__slider-prev.equipment__slider-prev_excavator
+							svg.swiper-button-icon
+								use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+					.equipment__tab(data-target='bulldozer')
+						.swiper.equipment__slider.equipment__slider_bulldozer
+							.swiper-wrapper
+								.swiper-slide
+									.equipment__card
+										.swiper.equipment__card-slider
+											.swiper-wrapper
+												a.swiper-slide(data-fslightbox='doz1' href='img/img__equipment_04_01b.jpg')
+													img.equipment__image(src='img/img__equipment_04_01.jpg', alt='')
+											.swiper-pagination.equipment__pagination
+											.swiper-button-next
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+											.swiper-button-prev
+												svg.swiper-button-icon
+													use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+										.equipment__card-title Бульдозер Komatsu D65EX-16
+										.equipment__card-row
+											.equipment__card-info 21 тн / 211 л. с.
+											.equipment__card-year 2021 г. в.
+											.equipment__card-number г/н АВ 8735 16
+										a.button.equipment__card-button(data-hystmodal="#order") Заказать
+						.swiper-button-next.equipment__slider-next.equipment__slider-next_bulldozer
+							svg.swiper-button-icon
+								use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+						.swiper-button-prev.equipment__slider-prev.equipment__slider-prev_bulldozer
+							svg.swiper-button-icon
+								use(xlink:href='img/svgSprite.svg#icon__arrow_right')
 	section.team.section
 		#team.section__anchor
 		.grid
@@ -242,7 +254,6 @@ block pageMain
 		img.join__image(src='img/bg__join.jpg')
 	section.objects
 		#objects.section__anchor
-		.grid
 		.swiper.objects__sliderBack
 			.swiper-wrapper
 				.swiper-slide

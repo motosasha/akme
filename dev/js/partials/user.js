@@ -1,6 +1,10 @@
 'use strict';
 
 window.onload = function() {
+	let scrollBarWidth = window.innerWidth - document.body.clientWidth;
+	console.log(scrollBarWidth);
+	document.documentElement.style.setProperty('--scrollbar-width', scrollBarWidth + 'px');
+
 	let header = document.querySelector('.header');
 	let className = 'header_on_scroll';
 	let scrollTrigger = 240;
@@ -32,24 +36,7 @@ window.onload = function() {
 		});
 	}
 
-	let excavatorSlideIndex = 0;
-	let bulldozerSlideIndex = 3;
-	let excavatorTrigger = document.querySelector('.excavatorTrigger');
-	let bulldozerTrigger = document.querySelector('.bulldozerTrigger');
-	excavatorTrigger.addEventListener('click', function (e) {
-		e.preventDefault();
-		equipmentSlider.slideTo(excavatorSlideIndex, 500);
-		bulldozerTrigger.classList.remove('equipment__trigger_active');
-		this.classList.add('equipment__trigger_active');
-	});
-	bulldozerTrigger.addEventListener('click', function (e) {
-		e.preventDefault();
-		equipmentSlider.slideTo(bulldozerSlideIndex, 500);
-		excavatorTrigger.classList.remove('equipment__trigger_active');
-		this.classList.add('equipment__trigger_active');
-	});
-
-	let equipmentSlider = new Swiper('.equipment__slider', {
+	let equipmentSlider = new Swiper('.equipment__slider_excavator', {
 		slidesPerView: 'auto',
 		spaceBetween: 24,
 		breakpoints: {
@@ -61,23 +48,55 @@ window.onload = function() {
 				slidesPerView: 'auto',
 				spaceBetween: 76,
 				navigation: {
-					nextEl: '.equipment__slider-next',
-					prevEl: '.equipment__slider-prev',
+					nextEl: '.equipment__slider-next_excavator',
+					prevEl: '.equipment__slider-prev_excavator',
+				},
+			}
+		}
+	});
+	let equipmentSlider2 = new Swiper('.equipment__slider_bulldozer', {
+		slidesPerView: 'auto',
+		spaceBetween: 24,
+		breakpoints: {
+			576: {
+				slidesPerView: 'auto',
+				spaceBetween: 76,
+			},
+			1280: {
+				slidesPerView: 'auto',
+				spaceBetween: 76,
+				navigation: {
+					nextEl: '.equipment__slider-next_bulldozer',
+					prevEl: '.equipment__slider-prev_bulldozer',
 				},
 			}
 		}
 	});
 
-	equipmentSlider.on('slideChange', function () {
-		if(this.activeIndex < bulldozerSlideIndex) {
-			excavatorTrigger.classList.add('equipment__trigger_active');
-			bulldozerTrigger.classList.remove('equipment__trigger_active');
-		}
-		if(this.activeIndex === bulldozerSlideIndex) {
-			excavatorTrigger.classList.remove('equipment__trigger_active');
-			bulldozerTrigger.classList.add('equipment__trigger_active');
-		}
-	});
+	function Tabs() {
+		let bindAll = function() {
+			let menuElements = document.querySelectorAll('[data-tab]');
+			for(let i = 0; i < menuElements.length ; i++) {
+				menuElements[i].addEventListener('click', change, false);
+			}
+		};
+		let clear = function() {
+			let menuElements = document.querySelectorAll('[data-tab]');
+			for(let i = 0; i < menuElements.length ; i++) {
+				menuElements[i].classList.remove('equipment__trigger_active');
+				let target = menuElements[i].getAttribute('data-tab');
+				document.querySelector(`[data-target='${target}']`).classList.remove('equipment__tab_active');
+			}
+		};
+		let change = function(e) {
+			clear();
+			e.target.classList.add('equipment__trigger_active');
+			let target = e.currentTarget.getAttribute('data-tab');
+			document.querySelector(`[data-target='${target}']`).classList.add('equipment__tab_active');
+		};
+		bindAll();
+	}
+	let connectTabs = new Tabs();
 
 	let equipmentCardSlider = new Swiper('.equipment__card-slider', {
 		slidesPerView: 1,
@@ -100,7 +119,7 @@ window.onload = function() {
 			},
 			1280: {
 				slidesPerView: 'auto',
-				spaceBetween: 152,
+				spaceBetween: 76,
 				navigation: {
 					nextEl: '.team__slider-next',
 					prevEl: '.team__slider-prev',
