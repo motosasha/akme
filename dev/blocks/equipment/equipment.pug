@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (equipment)
+
+mixin equipment(slides, title, info, year, numbers)
+	.swiper.equipment__card-slider
+		.swiper-wrapper
+			each slide in slides
+				a.swiper-slide(data-fslightbox='ex1' href='img/img__equipment_' + slide.image + 'b.jpg')
+					img.equipment__image(src='img/img__equipment_' + slide.image + '.jpg', alt='')
+		.swiper-pagination.equipment__pagination
+		.swiper-button-next
+			svg.swiper-button-icon
+				use(xlink:href='img/svgSprite.svg#icon__arrow_left')
+		.swiper-button-prev
+			svg.swiper-button-icon
+				use(xlink:href='img/svgSprite.svg#icon__arrow_right')
+	.equipment__card-title!= title
+	.equipment__card-row
+		each number in numbers
+			.equipment__card-number!= number.number
+	.equipment__card-row
+		.equipment__card-info!= info
+		.equipment__card-year!= year
+	a.button.equipment__card-button(data-hystmodal="#order") Заказать

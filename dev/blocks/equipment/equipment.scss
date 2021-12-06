@@ -109,7 +109,10 @@
 	&__card-row {
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 16px;
+		margin-top: 4px;
+		& + & {
+			margin-bottom: 16px;
+		}
 	}
 	&__card-info {
 		color: var(--colot_text_muted);
@@ -128,9 +131,9 @@
 	&__card-number {
 		border: 1px solid var(--color_brand);
 		color: var(--color_brand);
-		font-size: 15px;
+		font-size: 13px;
 		line-height: 20px;
-		margin: 0 0 4px;
+		margin: 0 4px 4px 0;
 		padding: 1px 7px;
 	}
 	&__card-button {
