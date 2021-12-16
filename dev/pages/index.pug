@@ -61,7 +61,8 @@ block pageMain
 											[
 												{image: '02_01'},
 												{image: '02_02'},
-												{image: '02_03'}
+												{image: '02_03'},
+												{image: '02_04'}
 											],
 											'Экскаватор Hitachi ZX240LC-5G',
 											'24 тн / 1,4 куб ковш',
@@ -69,7 +70,8 @@ block pageMain
 											[
 												{number: 'г/н АВ 8285 16'},
 												{number: 'г/н АВ 8286 16'},
-												{number: 'г/н АВ 8735 16'}
+												{number: 'г/н АВ 8633 16'},
+												{number: 'г/н АВ 8735 16'},
 											]
 										)
 								.swiper-slide
@@ -78,7 +80,8 @@ block pageMain
 											[
 												{image: '03_01'},
 												{image: '03_02'},
-												{image: '03_03'}
+												{image: '03_03'},
+												{image: '03_04'}
 											],
 											'Экскаватор Hitachi ZX330-5G',
 											'34 тн / 1,6 куб ковш',
@@ -86,7 +89,8 @@ block pageMain
 											[
 												{number: 'г/н АВ 8360 16'},
 												{number: 'г/н АВ 8401 16'},
-												{number: 'г/н АВ 8402 16'}
+												{number: 'г/н АВ 8402 16'},
+												{number: 'г/н АВ 8803 16'},
 											]
 										)
 						.swiper-button-next.equipment__slider-next.equipment__slider-next_excavator
@@ -100,23 +104,21 @@ block pageMain
 							.swiper-wrapper
 								.swiper-slide
 									.equipment__card
-										.swiper.equipment__card-slider
-											.swiper-wrapper
-												a.swiper-slide(data-fslightbox='doz1' href='img/img__equipment_04_01b.jpg')
-													img.equipment__image(src='img/img__equipment_04_01.jpg', alt='')
-											.swiper-pagination.equipment__pagination
-											.swiper-button-next
-												svg.swiper-button-icon
-													use(xlink:href='img/svgSprite.svg#icon__arrow_left')
-											.swiper-button-prev
-												svg.swiper-button-icon
-													use(xlink:href='img/svgSprite.svg#icon__arrow_right')
-										.equipment__card-title Бульдозер Komatsu D65EX-16
-										.equipment__card-row
-											.equipment__card-info 21 тн / 211 л. с.
-											.equipment__card-year 2021 г. в.
-											.equipment__card-number г/н АВ 8735 16
-										a.button.equipment__card-button(data-hystmodal="#order") Заказать
+										+equipment(
+											[
+												{image: '04_01'},
+												{image: '04_02'},
+												{image: '04_03'},
+											],
+											'Бульдозер Komatsu D65EX-16',
+											'21 тн / 211 л. с.',
+											'2021 г. в.',
+											[
+												{number: 'г/н АВ 8571 16'},
+												{number: 'г/н АВ 8572 16'},
+												{number: 'г/н АВ 8735 16'},
+											]
+										)
 						.swiper-button-next.equipment__slider-next.equipment__slider-next_bulldozer
 							svg.swiper-button-icon
 								use(xlink:href='img/svgSprite.svg#icon__arrow_left')
@@ -133,31 +135,27 @@ block pageMain
 					.swiper.team__slider
 						.swiper-wrapper
 							.swiper-slide
-								+team('01', 'Павел Белозёров', true, true, '12 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('01', 'Андрей Алтапов', true, true, '12 людям', 'ex', '11 лет')
 							.swiper-slide
-								+team('02', 'Макар Корнилов', false, false, '1 человеку', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('02', 'Андрей Вегеря', false, false, '1 человеку', 'ex', '33 года')
 							.swiper-slide
-								+team('03', 'Симон Лампофье', true, true, '943 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('04', 'Пётр Бобров', false, '', '', 'ex', '5 лет')
 							.swiper-slide
-								+team('04', 'Николя Коэн', false, '', '', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('05', 'Иван Гаврилов', true, true, '12 людям', 'ex', '7 лет')
 							.swiper-slide
-								+team('05', 'Жорж Милославский', true, true, '12 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('06', 'Сергей Пронин', false, false, '1 человеку', 'ex', '6 лет')
 							.swiper-slide
-								+team('06', 'Адам Бзежинский', false, false, '1 человеку', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('07', 'Дмитрий Ретин', true, true, '943 людям', 'ex', '6 лет')
 							.swiper-slide
-								+team('07', 'Клайв Льюис', true, true, '943 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('08', 'Алексей Майоров', false, '', '', 'ex', '4 года')
 							.swiper-slide
-								+team('08', 'Натан Бельзебер', false, '', '', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('09', 'Алексей Суряков', false, false, '1 человеку', 'ex', '30 лет')
 							.swiper-slide
-								+team('09', 'Карим Абдул-Назар', false, false, '1 человеку', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('10', 'Евгений Морозов', true, true, '943 людям', 'ex', '7 лет')
 							.swiper-slide
-								+team('10', 'Грей Фокс', true, true, '943 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('11', 'Александр Карпов', true, true, '12 людям', 'ex', '17 лет')
 							.swiper-slide
-								+team('11', 'Аштанга Намаскар', true, true, '12 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
-							.swiper-slide
-								+team('12', 'Илья Попов', false, false, '1 человеку', 'Машинист экскаватора <br> Стаж работы — 10 лет')
-							.swiper-slide
-								+team('13', 'Ликёр Абсентис', true, true, '943 людям', 'Машинист экскаватора <br> Стаж работы — 10 лет')
+								+team('13', 'Александр Полежаев', true, true, '943 людям', 'ex', '42 года')
 					.swiper-button-next.team__slider-next
 						svg.swiper-button-icon
 							use(xlink:href='img/svgSprite.svg#icon__arrow_left')

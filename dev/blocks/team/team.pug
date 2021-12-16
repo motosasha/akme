@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (team)
 
-mixin team(image, name, checkbox, isLiked, amount, description)
+mixin team(image, name, checkbox, isLiked, amount, place, exp)
 	.team__card
 		.team__card-header
 			img.team__card-avatar(src='img/img__avatar_' + image + '.jpg', alt='')
@@ -19,4 +19,11 @@ mixin team(image, name, checkbox, isLiked, amount, description)
 			else if isLiked === false
 				.team__card-message Понравилось #[span #{amount}]
 			else
-			.team__card-descr!= description
+			if place === 'ex'
+				.team__card-descr Машинист экскаватора
+					br
+					| Стаж работы — #{exp}
+			else if place === 'bul'
+				.team__card-descr Бульдозерист
+					br
+					| Стаж работы — #{exp}
