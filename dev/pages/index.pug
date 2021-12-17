@@ -45,14 +45,14 @@ block pageMain
 										+equipment(
 											[
 												{image: '01_01'},
-												{image: '01_02'}
+												{image: '01_02'},
 											],
 											'Экскаватор Hitachi ZX200-5G',
 											'20 тн / 1 куб ковш',
 											'2020 г. в.',
 											[
 												{number: 'г/н АВ 5147 16'},
-												{number: 'г/н АВ 6402 16'}
+												{number: 'г/н АВ 6402 16'},
 											]
 										)
 								.swiper-slide
@@ -62,7 +62,8 @@ block pageMain
 												{image: '02_01'},
 												{image: '02_02'},
 												{image: '02_03'},
-												{image: '02_04'}
+												{image: '02_04'},
+												{image: '02_05'},
 											],
 											'Экскаватор Hitachi ZX240LC-5G',
 											'24 тн / 1,4 куб ковш',
@@ -72,6 +73,7 @@ block pageMain
 												{number: 'г/н АВ 8286 16'},
 												{number: 'г/н АВ 8633 16'},
 												{number: 'г/н АВ 8735 16'},
+												{number: 'г/н АВ 8894 16'},
 											]
 										)
 								.swiper-slide
@@ -81,7 +83,7 @@ block pageMain
 												{image: '03_01'},
 												{image: '03_02'},
 												{image: '03_03'},
-												{image: '03_04'}
+												{image: '03_04'},
 											],
 											'Экскаватор Hitachi ZX330-5G',
 											'34 тн / 1,6 куб ковш',
@@ -116,7 +118,6 @@ block pageMain
 											[
 												{number: 'г/н АВ 8571 16'},
 												{number: 'г/н АВ 8572 16'},
-												{number: 'г/н АВ 8735 16'},
 											]
 										)
 						.swiper-button-next.equipment__slider-next.equipment__slider-next_bulldozer
@@ -185,6 +186,8 @@ block pageMain
 					img.objects__image(src='img/img__object_02.jpg', alt='')
 				.swiper-slide
 					img.objects__image(src='img/img__object_03.jpg', alt='')
+				.swiper-slide
+					img.objects__image(src='img/img__object_04.jpg', alt='')
 			.swiper-pagination.objects__sliderPagination
 			.swiper-button-next
 				svg.swiper-button-icon
@@ -201,34 +204,43 @@ block pageMain
 					.swiper-slide
 						.objects__grid
 							.objects__info
-								h3.objects__title М-12
-								.objects__name Строящаяся скоростная автомобильная дорога Москва — Нижний Новгород — Казань
-								.objects__stage 6 этап: км 454 — км 586
-								.objects__descr от пересечения с автомобильной дорогой регионального значения 22К-0162 «Работки – Порецкое» до пересечения с автомобильной дорогой федерального значения А – 151 «Цивильск – Ульяновск»
-								.objects__place Нижегородская область, Чувашская республика
-								.objects__company ООО «Рога и копыта»
-								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
-					.swiper-slide
-						.objects__grid
-							.objects__info
-								h3.objects__title М-12
-								.objects__name Строящаяся скоростная автомобильная дорога Москва — Нижний Новгород — Казань
-								.objects__stage 6 этап: км 454 — км 586
-								.objects__descr от пересечения с автомобильной дорогой регионального значения 22К-0162 «Работки – Порецкое» до пересечения с автомобильной дорогой федерального значения А – 151 «Цивильск – Ульяновск»
-								.objects__place Нижегородская область, Чувашская республика
-								.objects__company ООО «Рога и копыта»
-								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
-					.swiper-slide
-						.objects__grid
-							.objects__info
 								h3.objects__title М-5
 								.objects__name Реконструкция автомобильной дороги М-5 «УРАЛ»
-								.objects__stage км 1360+000 — км 1375+000
-								.objects__descr от Москвы через Рязань, Пензу, Самару, Уфу до Челябинска
-								.objects__place Республика Башкортостан
-								.objects__company ООО «Копыта и рога»
+								.objects__stage на участке км 1360+000 — км 1375+000
+								.objects__descr от Москвы через Рязань, Пензу, Самару, Уфу до Челябинска
+								.objects__place п. Буздяк Республика Башкортостан
+								.objects__company АО «Ханты-Мансийскдорстрой»
 								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
-
+					.swiper-slide
+						.objects__grid
+							.objects__info
+								h3.objects__title М-12
+								.objects__name Строящаяся скоростная автомобильная дорога Москва — Нижний Новгород — Казань
+								.objects__stage 6 этап: км 454 — км 586
+								.objects__descr от пересечения с автомобильной дорогой федерального значения п. Ибреси Чувашская республика
+								.objects__place Нижегородская область, Чувашская республика
+								.objects__company ООО «Строительное управление № 926» (АО «АВТОБАН»)
+								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
+					.swiper-slide
+						.objects__grid
+							.objects__info
+								h3.objects__title М-12
+								.objects__name Строящаяся скоростная автомобильная дорога Москва – Нижний Новгород – Казань
+								.objects__stage 6 этап км 540 — км 586
+								.objects__descr от пересечения с автомобильной дорогой регионального значения п. Шумерля Чувашская республика
+								.objects__place Нижегородская область, Чувашская республика
+								.objects__company ООО «Строительное управление № 967» (АО «АВТОБАН»)
+								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
+					.swiper-slide
+						.objects__grid
+							.objects__info
+								h3.objects__title М-12
+								.objects__name Строящаяся скоростная автомобильная дорога Москва – Нижний Новгород – Казань
+								.objects__stage 6 этап км 454 — км 586
+								.objects__descr от пересечения с автомобильной дорогой федерального г. Сергач Нижегородская область
+								.objects__place Нижегородская область, Чувашская республика
+								.objects__company АО «Строительное управление № 909» (АО «АВТОБАН»)
+								a.button.objects__button(data-hystmodal="#review") Смотреть отзыв
 	#callback.hystmodal(aria-hidden='true')
 		.hystmodal__wrap
 			.popup.hystmodal__window(role='dialog' aria-modal='true')
